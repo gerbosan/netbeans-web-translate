@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+<!--
+Copyright (c) 2011, Oracle and/or its affiliates. All rights reserved.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Configurando el IDE NetBeans para C/C++/Fortran - NetBeans IDE 7.3</title>
+    <meta name="DESCRIPTION" content="Configuring the NetBeans IDE for C/C++/Fortran - NetBeans IDE 7.3">
+
+    <link rel="SHORTCUT ICON" href="/images_www/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/netbeans3.css" media="screen">
+    <script type="text/javascript" src="/images_www/js/jquery-1.6.2.min.js"></script>
+    <script src="/images_www/js/lang-pulldown.js" type="text/javascript"></script>
+    <script src="/images_www/js/html5.js" type="text/javascript"></script>
+    <script src="/images_www/js/companion-projects.js" type="text/javascript"></script>
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="//netbeans.org/images_www/pie/PIE.js"></script>
+<![endif]-->
+    <script language="JavaScript" type="text/javascript">
+        <!--
+        var username = "guest";
+        //-->
+    </script>
+    <link rel="stylesheet" type="text/css" href="../../../netbeans3.css">
+</head>
+
+<body class="blue-bg">
+    <div id="wrapper-flex">
+        <div id="hdr">
+            <div id="lang-sel">
+                <div class="lang-dropdown">
+                    <script type="text/javascript">
+                        startList()
+                    </script>
+                    <ul id="nav">
+                        <li><a href="#" style="text=decoration:none;color:white;">Choose page language<img src="/images_www/v7/design/icon_arrow_language.png" border="0" alt="choose" id="lang-arrow" width="7" height="10"></a>
+                            <ul class="submenu">
+                                <li><a href="cpp-setup-instructions_pt_BR.html">Brazilian&nbsp;Portuguese</a></li>
+                                <li><a href="cpp-setup-instructions_ja.html">Japanese</a></li>
+                                <li><a href="cpp-setup-instructions_ru.html">Russian</a></li>
+                                <li><a href="cpp-setup-instructions_zh_CN.html">Simplified&nbsp;Chinese</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="navtabs">
+                <a href="/"><img src="/images_www/v7/design/logo_netbeans_red.png" id="nblogo" width="130" height="32"></a>
+                <ul>
+                    <li class="hover first"><a href="/features/index.html" title="NetBeans&nbsp;IDE">IDE NetBeans</a></li>
+                    <li class="hover "><a href="/features/platform/index.html" title="NetBeans&nbsp;Platform">Plataforma NetBeans</a></li>
+                    <li class="hover "><a href="/enterprise/index.html" title="Enterprise">Empresa</a></li>
+                    <li class="hover "><a href="http://plugins.netbeans.org/PluginPortal/" title="Plugins">Plugins</a></li>
+                    <li class="hover "><a href="/kb/index.html" title="Docs&nbsp;&amp;&nbsp;Support">Docs &amp; Soporte</a></li>
+                    <li class="current "><a href="/community/index.html" title="Community">Comunidad</a></li>
+                </ul>
+                <div id="search-div">
+                    <form action="/search_result.html" id="cse-search-box">
+                        <input type="hidden" name="cx" value="006102455337629464213:mt38ytkbuak">
+                        <input type="hidden" name="cof" value="FORID:11">
+                        <input type="text" id="search-input" value="Búsqueda" name="q">
+                        <input type="image" src="/images_www/v7/design/icon_search.png" id="magnifier" alt="search">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="navig-breadcrumbs"><a href="/index.html">INICIO</a> / <a href="/community/index.html">Comunidad</a> / <a href="/community/releases/index.html">Lanzamientos &amp; Planeamiento</a> / <a href="/community/releases/73/index.html">Lanzamientos &amp; Planeamiento</a> </div>
+        <!-- start content area -->
+        <div id="middle">
+            <table class="colapse full-width f-page-table-2col">
+                <!-- main content table -->
+                <tbody>
+                    <tr>
+                        <td class="valign-top">
+                            <!-- main content cell, testwww page is here -->
+                            <div id="print">
+                                <a href="/community/releases/73/cpp-setup-instructions.html?print=yes"><img src="/images_www/v5/print.gif" alt="" width="105" height="15" border="0"></a>
+                            </div>
+                            <div class="f-page-auto-cell">
+
+                                <a name="top"></a>
+
+                                <h1>Configurando el IDE NetBeans para C/C++/Fortran</h1>
+                                <!-- START INTRO +++++++ -->
+                                <div class="articledate" style="margin-left: 0px;font-style:italic;"><em>Febrero 2013</em> [Revisión número: V7.3-1]</div>
+
+                                <p>Este documento proporciona información sobre la descarga, instalación y configuración de soporte de C/C++ en el IDE NetBeans. Antes de comenzar a desarrollar en C/C++, el IDE NetBeans require el módulo plugin C/C++ y compiladores C/C++ de terceros, utilidades <code>make</code> y debuggers.
+                                </p>
+
+                                <!-- END INTRO -->
+                                <h3>Contenido</h3>
+                                <img src="../../../images_www/articles/73/netbeans-stamp.png" class="stamp" alt="Content on this page applies to NetBeans IDE 7.3" title="Content on this page applies to the NetBeans IDE 7.3">
+                                <ul class="toc">
+                                    <li><a href="#downloading" title="Enabling C/C++/Fortran in the IDE">Habilitando C/C++/Fortran en el IDE</a></li>
+                                    <li><a href="#compilers" title="Installing and Setting Up the Compilers">Instalando y Configurando los Compiladores y Herramientas</a></li>
+                                    <li><a href="#verifying" title="Verifying the Installation">Verificando la Instalación</a></li>
+                                    <li><a href="#ts" title="Troubleshooting Tool Issues">Solucionando Problemas en la Herramienta</a></li>
+                                </ul>
+
+
+                                <p><b>Para continuar con este tutorial, necesita el siguiente software y recursos.</b></p>
+
+                                <table>
+                                    <tbody>
+
+                                        <tr>
+                                            <th class="tblheader" scope="col">Software o Recurso</th>
+                                            <th class="tblheader" scope="col">Version Requerida</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="tbltd1"><a href="https://netbeans.org/downloads/index.html">IDE NetBeans</a></td>
+                                            <td class="tbltd1">7.3 con el plugin C/C++ de NetBeans</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tbltd1"><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Developer Kit (JDK)</a></td>
+                                            <td class="tbltd1">6 o superior</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+
+                                <br>
+                                <!-- DOWNLOADING ---------------------------------------------------------->
+                                <h2><a name="downloading">Habilitando C/C++/Fortran en el IDE</a></h2>
+                                <p>
+                                    El IDE NetBeans es un IDE modular dinámico, puede ser modificado añadiendo y quitando módulos del programa. Puede añadir funcionalidades añadiendo módulos plugin o quitar funcionalidades desintalando módulos plugin. Revise la ayuda en línea del IDE NetBeans para más información acerca de los plugins.</p>
+                                <p>
+                                    Si desea trabajar con programas en C, C++, o Fortran con el IDE NetBeans, su instalación de NetBeans debe incluir el plugin C/C++.</p>
+                                <p class="tips">Aunque el plugin se llame C/C++, también incluye soporte para programación en Fortran.</p>
+
+                                <div class="indent">
+                                    <h3>Si todavía no ha instalado el IDE NetBeans 7.3</h3>
+                                    <p>Si todavía no ha instalado el IDE NetBeans, descargue el paquete con <b>C/C++</b> o el paquete con <b>Todo</b> de <a href="https://netbeans.org/downloads/index.html">la Página de Descarga del IDE NetBeans 7.3</a>. Si no va a usar otros lenguajes como Java y Ruby, debe descargar el paquete C/C++.</p>
+
+                                    <h3>Si ya tiene el IDE NetBeans 7.3 pero desconoce si tiene el plugin C/C++</h3>
+                                    <p>Si ya tiene el IDE NetBeans, verifique que el IDE NetBeans incluye el plugin C/C++ seleccionado Archivo &gt; Proyecto Nuevo. Si C/C++ está listado como una de las Categorías, ya dispone del módulo plugin C/C++. Debe pasar a la sección <a href="#compilers">Instalando y Configurando los Compiladores y Herramientas</a>.
+                                    </p>
+
+                                    <h3>Si ya tiene el IDE NetBeans 7.3 sin el plugin C/C++</h3>
+                                    <p>Si su IDE NetBeans no muestra una categoría de proyectos C/C++ cuando selecciona Archivo &gt; Proyecto Nuevo, complete los siguientes pasos para añadir el módulo plugin C/C++.</p>
+                                    <ol>
+                                        <li>Si su red usa un proxy, seleccionedel menú del IDE Herramientas &gt; Opciones &gt; General, marque Configuración Manual de Proxy, ingrese los datos de su proxy en Proxy HTTP y Puerto y haga clic en Aceptar.</li>
+                                        <li>Seleccione Herramientas &gt; Plugins.</li>
+
+                                        <li>En la caja de dialogo Plugins, haga clic en la lengüeta Plugins Disponibles, y desplace el cursor hasta la categoría C/C++.
+                                        </li>
+                                        <li>Seleccionar el checkbox C/C++ y haga clic en Instalar para iniciar el Instalador del IDE NetBeans.</li>
+                                        <li>Haga clic en Siguiente en el Instalador del IDE NetBeans.</li>
+                                        <li>Leer el Acuerdo de Licencia, seleccionar el checkbox para aceptar los términos del acuerdo de licencia y haga clic en Siguiente.</li>
+                                        <li>Haga clic en Instalar.</li>
+                                        <li>Después de que termine la instalación, selecionar Reiniciar el IDE ahora o Reiniciar el IDE luego y haga clic en Terminar.</li>
+                                    </ol>
+                                </div>
+
+
+
+                                <!-- COMPILER SETUP ------------------------------------------------------->
+                                <h2><a name="compilers">Instalando y configurando el Compilador y Herramientas</a></h2>
+                                <p>El módulo C/C++ de NetBeans requiere un compilador C compiler, compilador C++, utilidad <tt>make</tt>, y debugger <tt>gdb</tt>. Siga las siguientes instrucciones para la plataforma de su sistema de desarrollo.
+                                </p>
+                                <table class="b-none vatop" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="hyphen">-&nbsp;</td>
+                                            <td><a href="#compilers_windows" title="Windows Platform">Microsoft Windows</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hyphen">-&nbsp;</td>
+                                            <td><a href="#compilers_solaris" title="Solaris Platform">Oracle Solaris</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hyphen">-&nbsp;</td>
+                                            <td><a href="#compilers_linux" title="Linux Platforms">Linux</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hyphen">-&nbsp;</td>
+                                            <td><a href="#compilers_mac" title="Macintosh OS X">Macintosh OS X</a></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+
+
+                                <!-- COMPILER SETUP: WINDOWS ++++++++ -->
+                                <!--<blockquote>-->
+                                <div class="indent">
+                                    <h3><a name="compilers_windows"></a>Microsoft Windows</h3>
+                                    <p>El módulo C/C++ de NetBeans ha sido probado con compiladores de Cygwin y MinGW. Si instala ambos, Cygwin y MinGW, se cuidadoso al mantener separada la localizacion de las instalciones y de no mezclar las herramientas de Cygwin y MinGW en una colección de herramientas en el IDE.</p>
+                                    <p class="notes"><strong>Nota.</strong> Si quiere usar Qt con Windows, debe usar MinGW. Vea el artículo <a href="../../../kb/72/cnd/qt-applications.html">Working with Qt Applications</a> por las instrucciones para instalar MinGW y software de Qt.</p>
+
+                                    <table class="b-none vatop" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="hyphen">-&nbsp;</td>
+                                                <td><a href="#cygwin" title="Cygwin Compilers and Tools">Compiladores y Herramientas de Cygwin</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="hyphen">-&nbsp;</td>
+                                                <td><a href="#mingw" title="MinGW Compilers and Tools">Compiladores y Herramientas de MinGW</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <h4><a name="cygwin"></a>Compiladores y Herramientas de Cygwin</h4>
+
+                                    <p>El módulo C/C++ de NetBeans ha sido probado con los siguientes compiladores y herramientas de <a href="http://cygwin.com/" target="_blank">Cygwin.com</a>.</p>
+
+                                    <table>
+                                        <tbody>
+
+                                            <tr>
+                                                <th class="tblheader" scope="col">Software o Recurso</th>
+                                                <th class="tblheader" scope="col">Version Probada</th>
+                                                <th class="tblheader" scope="col">Descripción</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>cygwin1.dll</tt></td>
+                                                <td class="tbltd1">1.7.7, 1.7.9 </td>
+                                                <td class="tbltd1">Ambiente similar a Linux de Cygwin para Windows</td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td class="tbltd1"><tt>gcc</tt></td>
+                                                <td class="tbltd1">4.3.4</td>
+                                                <td class="tbltd1">Compilador C de Cygwin</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>g++</tt></td>
+                                                <td class="tbltd1">4.3.4</td>
+                                                <td class="tbltd1">Compilador C++ de Cygwin</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>gdb</tt></td>
+                                                <td class="tbltd1">6.8</td>
+                                                <td class="tbltd1">Debugger GNU de Cygwin</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>make</tt></td>
+                                                <td class="tbltd1">3.81</td>
+                                                <td class="tbltd1">Utilidad make de Cygwin</td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br>
+                                    <p>Si ya cuenta con los compiladores gcc y g++ de Cygwin, <tt>make</tt> de GNU, y el debugger <tt>gdb</tt> instalado en su sistema Windows y su ruta está configurada correctamente, asergurese de contar con las versiones correctas.
+                                    </p>
+
+                                    <p><b>Para revisar las versiones de compiladores y herramientas de Cygwin:</b></p>
+                                    <ol>
+                                        <li>
+                                            <p>Escriba los siguientes comandos en el símbolo de sistema de Windows para revisar la versión del ambiente de Cygwin:</p>
+                                            <pre class="examplecode">C:\&gt; cygcheck -c cygwin</pre>
+                                        </li>
+                                        <li>Escriba los siguientes comandos en el símbolo de sistema de Windows para revisar la versiónde compiladores gcc y g++, <tt>make</tt> y <tt>gdb</tt> de Cygwin:
+                                            <pre class="examplecode">C:\&gt; gcc --version
+C:\&gt; g++ --version
+C:\&gt; make --version
+C:\&gt; gdb --version
+</pre>
+                                        </li>
+                                    </ol>
+                                    <p>
+                                        Si cuenta con las versiones correctas, no es requerida la configuración. Vea <a href="#verifying">Verificando la Instalación</a> para verificar que las herramientas están instaladas correctamente para el IDE de NetBeans.</p>
+
+                                    <p><b>Para instalar los compiladores gcc y g++, <tt>make</tt>, el debugger <tt>gdb</tt> de GNUT de |<a href="http://cygwin.com/" target="blank">cygwin.com</a>:</b></p>
+                                    <ol>
+                                        <li>Revise <a href="http://cygwin.com/cygwin-ug-net/index.html" target="_blank">Cygwin User's Guide</a> para información complera acerca de la instalaciín y uso de Cygwin.</li>
+                                        <li>Descargue el programa <tt>setup.exe</tt> de Cygwin haciendo clic en Install Cygwin en la barra de navegación izquierda o haciendo clic directamente en el enlace <a href="http://www.cygwin.com/setup.exe">
+                                                <tt>setup.exe</tt></a>.
+                                        </li>
+
+                                        <li>
+                                            Ejecute el programa <tt>setup.exe</tt>. Acepte las opciones por defecto hasta que llegue a la página Select Your Internet Connection. Seleccionar la mejor opción para su sistema. Haga clic en Next.
+                                        </li>
+                                        <li>
+                                            En la página Choose Download Site, escoger el sitio de descarga que crea que está más próxima. Haga clic en Next.
+                                        </li>
+                                        <li>
+                                            En la página Select Packages, selecciona los paquetes a descargar. Haga clic en + a lado de  Devel para expandir la categoría de herramientas de desarrollo. Puede ser necesario agrandar la ventana para ver más información.
+                                        </li>
+                                        <li>
+                                            Seleccione cada paquete que desee descargar haciendo clic en la etiqueta Skip, que revela el número de versión de los paquetes a descargar. Como mínimo, seleccione
+                                            <ul>
+                                                <li>gcc-core: C compiler
+                                                </li>
+                                                <li>gcc-g++: C++ compiler
+                                                </li>
+                                                <li>gdb: The GNU Debugger
+                                                </li>
+                                                <li>make: the GNU version of the 'make' utility
+                                                </li>
+                                            </ul>
+                                            Los paquetes que son requeridos por los paquetes que elija serán seleccionados automáticamente.
+                                        </li>
+                                        <li>Haga clic en Next para conectarse al sitio de descarga y descargar los paquete elegidos y haga clicen Finish cuando la instalación esté completa.</li>
+                                        <li>
+                                            Añada el directorio del compilador Cygwin a la ruta de su sistema para permitir que el IDE NetBeans encuentre la colección de herramientas:
+                                            <br>
+                                            <br>
+                                            <ol type="a">
+                                                <li>Abra el Panel de Control:
+                                                    <br> - En Windows XP elija Inicio &gt; Configuración &gt; Panel de Control y haga doble clic en Sistema.
+                                                    <br> - En Windows 7, escriba <b>var</b> en la caja de búsqueda del menú Inicio para encontrar rápido el enlaces para Editar las variables de entorno del sistema.</li>
+                                                <li>Elija la lengüeta Avanzado y haga clic en Variables de Entorno.</li>
+                                                <li>En el panel de Variables de Sistema del dialogo Variables de Entorno, elija la variable <tt>Path</tt> y haga clic en Editar.</li>
+                                                <li>Añada la ruta del <tt><i>directorio-cygwin</i>\bin</tt> en la variable <tt>Path</tt> y haga clic en  Aceptar. Por defecto el, <tt><i>directorio-cygwin</i></tt> es <tt>C:\cygwin</tt>. Los nombres de los directorios deben estar separados con punto y coma. La ruta editada debe verse como <tt>%SystemRoot%\system32;%SystemRoot%;C:\Program Files\QuickTime\QTSystem;C:\cygwin\bin</tt></li>
+                                                <li>Haga clic en Aceptar en el dialogo de Variables de Entorno y el dialogo de Propiedades de Sistema.
+                                                </li>
+                                                <li>Vea <a href="#verifying">Verificando la Instalación</a> para verificar que las herramientas están instaladas correctamente para el IDE NetBeans.</li>
+                                            </ol>
+
+                                        </li>
+                                    </ol>
+
+                                    <!-- MinGW installation -->
+
+                                    <h4><a name="mingw"></a>Compiladores y Herramientas MinGW</h4>
+                                    <p>El IDE NetBeans 7.3 ha sido probado con el Minimalist GNU for Windows (MinGW) y el entorno tipo Unix Minimal System (MSYS). Las versiones probadas y las instrucciones de instalación se muestran a continuación.</p>
+
+                                    <p class="notes margin-around"><strong>Nota.</strong> Si desea usar Qt con Windows, vea el artículo <a href="../../../kb/72/cnd/qt-applications.html">Working with Qt Applications</a> para tener las instrucciones para instalar MinGW y software Qt.</p>
+
+                                    <table>
+                                        <tbody>
+
+                                            <tr>
+                                                <th class="tblheader" scope="col">Software o Recurso</th>
+                                                <th class="tblheader" scope="col">Version Probada</th>
+                                                <th class="tblheader" scope="col">Descripción</th>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td class="tbltd1"><tt>gcc</tt></td>
+                                                <td class="tbltd1">4.6.2</td>
+                                                <td class="tbltd1">Compilador C</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>g++</tt></td>
+                                                <td class="tbltd1">4.6.2</td>
+                                                <td class="tbltd1">Compilador C++ de MinGW</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>gdb</tt></td>
+                                                <td class="tbltd1">7.4</td>
+                                                <td class="tbltd1">Debugger GNU de MinGW</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>make</tt></td>
+                                                <td class="tbltd1">3.81</td>
+                                                <td class="tbltd1">Utilidad <tt>make</tt> de  MSYS
+                                                    <br> Notar que el make de MinGW no está soportado</td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br>
+                                    <p><b>Para instalar compiladores, <tt>make</tt> y debugger <tt>gdb</tt> GNU de <a href="http://mingw.org" target="_blank">mingw.org</a>:</b></p>
+                                    <ol>
+                                        <li>Inicie sesión en Windows usando una cuenta con privilegios de administrador de la computadora.
+                                        </li>
+                                        <li>Descargue el instalador MinGW de <a href="http://sourceforge.net/projects/mingw">http://sourceforge.net/projects/mingw</a>.</li>
+                                        <li>Ejecute el instalador MinGW, que debe de tener un nombre parecido a <tt>mingw-get-inst-20120426.exe</tt>.</li>
+                                        <li>Acepte el folder destino por defecto <tt>C:\MinGW</tt> a fin de minimizar cualquier dificultad potencial de usar los compiladores de otra localización.</li>
+                                        <li>En el instalador MinGW seleccione los siguientes componentes para instalar:
+                                            <ul>
+                                                <li>C</li>
+                                                <li>C++</li>
+                                                <li>Fortran <em>(si trabajará con programas Fortran)</em></li>
+                                                <li>MSYS Basic System</li>
+                                                <li>MinGW Developer Toolkit</li>
+                                            </ul>
+                                        </li>
+                                        <li>Haga clic en Install y espere unos minutos mientras el programa de instalación descarga los componentes seleccionados.</li>
+                                        <li>Haga clic en Finish cuando los paquetes hayan terminado de descargarse.</li>
+                                    </ol>
+                                    <p>Debe añadir las rutas a los binarios para las herramientas MinGW y MSYS en su RUTA. Si instaló en las localizaciones por defecto, las rutas son
+                                        <tt>C:\MinGW\bin</tt> y <tt>C:\MinGW\MSYS\1.0\bin</tt>.</p>
+                                    <p><b>Para editar la RUTA de la variable de entorno en Windows:</b></p>
+
+                                    <ol>
+                                        <li>Abrir la ventaba de Variables de Entorno:
+                                            <ul>
+                                                <li>En Windows XP y Windows 2000: Clic derecho en Mi Computadora &gt; Propiedades &gt; lengüeta Avanzados &gt; botón Variables de Entorno.</li>
+                                                <li>En Windows Vista y Windows 7: Clic derechos en Mi Computadora &gt; Propiedades &gt; enlace Configuración Avanzada de Sistema &gt; botón Variables de Entorno.</li>
+                                            </ul>
+                                        </li>
+                                        <li>En la ventana de Variables de Entorno, seleccionar la variable Ruta en la sección Variable de Sistema y haga clic en Editar.</li>
+                                        <li>Al final de la ruta, inserte un punto y coma y añada las rutas de los ejecutables para MinGW y MSYS. Use punto y coma entre las rutas y no introduzca espacio alguno. Tenga cuidado de no eliminar el contenido de su RUTA o su computadora no podrá funcionar correctamente.
+                                            <br>
+                                            <p>Cuando termine, su ruta se verá parecido a:</p>
+                                            <pre>%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;
+%SYSTEMROOT%\System32\WindowsPowerShell\v1.0;C:\MinGW\bin;C:\MinGW\MSYS\1.0\bin</pre>
+                                        </li>
+                                        <li>Haga clic en Aceptar en la ventana de Variables de Entorno.</li>
+                                    </ol>
+
+                                    <p>Vea <a href="#verifying">Verificando la Instalación</a> para verificar que las herramientas se instalaron correctamente para el IDE NetBeans.</p>
+                                    <!-- COMPILER SETUP: SOLARIS OS -------------------------------->
+                                    <h3><a name="compilers_solaris"></a>Oracle Solaris</h3>
+                                    <p>
+                                        On Oracle Solaris platforms, you can use GNU tools or Oracle Solaris Studio tools. The GNU tools are included in Oracle Solaris 10 and Oracle Solaris 11 in the <tt>/usr/sfw/bin</tt> directory by default. The Oracle
+                                        Solaris Studio software is a suite of developer tools that are free to download. The Oracle Solaris Studio compilers are optimized for Oracle Sun hardware, and make it easier to produce performance tuned Oracle
+                                        Solaris binaries.</p>
+
+                                    <p>NetBeans IDE 7.3 has been tested with the following compilers and tools.</p>
+
+                                    <table>
+                                        <tbody>
+
+                                            <tr>
+                                                <th class="tblheader" scope="col">Software or Resource</th>
+                                                <th class="tblheader" scope="col">Version Tested</th>
+                                                <th class="tblheader" scope="col">Description</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>cc</tt></td>
+                                                <td class="tbltd1">5.10, 5.11, 5.12 </td>
+                                                <td class="tbltd1">Sun Studio 12 Update 1, Oracle Solaris Studio 12.2, and Oracle Solaris Studio 12.3 C compilers</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>CC</tt></td>
+                                                <td class="tbltd1">5.10, 5.11, 5.12 </td>
+                                                <td class="tbltd1">Sun Studio 12 Update 1, Oracle Solaris Studio 12.2, and Oracle Solaris Studio 12.3 C++ compilers</td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td class="tbltd1"><tt>gcc</tt></td>
+                                                <td class="tbltd1">3.4.3, 3.4.6</td>
+                                                <td class="tbltd1">GNU C compilers</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>g++</tt></td>
+                                                <td class="tbltd1">3.4.3, 3.4.6 </td>
+                                                <td class="tbltd1">GNU C++ compilers</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>gdb</tt></td>
+                                                <td class="tbltd1">6.8</td>
+                                                <td class="tbltd1">GNU debugger</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>gmake</tt></td>
+                                                <td class="tbltd1">3.81</td>
+                                                <td class="tbltd1">GNU make</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>make</tt></td>
+                                                <td class="tbltd1">3.81</td>
+                                                <td class="tbltd1">Solaris make</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>dmake</tt></td>
+                                                <td class="tbltd1">7.9, 8.0, 8.1 </td>
+                                                <td class="tbltd1">Sun Studio 12 Update 1, Oracle Solaris Studio 12.2, and Oracle Solaris Studio 12.3 distributed make utility</td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h4>Oracle Solaris Studio 12.3 Compilers</h4>
+                                    <p>If you want to use the Oracle Solaris Studio 12.3 compilers on Oracle Solaris 10 or Oracle Solaris 11:</p>
+                                    <ul>
+                                        <li>If you have Oracle Solaris Studio 12.3 software installed, ensure that <tt>/<i>installation
+directory</i>/solarisstudio12.3/bin</tt> is in your path before you start the NetBeans IDE. The default location on Solaris 10 and Solaris 11 is <tt>/opt/solarisstudio12.3/bin</tt></li>
+                                        <li>
+                                            If you do not have Oracle Solaris Studio 12.3 software installed, you can download it free at
+                                            <a href="http://www.oracle.com/technetwork/server-storage/solarisstudio/downloads/index-jsp-141149.html" target="_blank">
+                                                <tt>http://www.oracle.com/technetwork/server-storage/solarisstudio/downloads/index-jsp-141149.html</tt></a>.</li>
+                                    </ul>
+
+                                    <p><b>To download and install the Oracle Solaris Studio 12.3 compilers on
+ Oracle Solaris 10:</b></p>
+                                    <ol>
+
+                                        <li>Create a directory for the downloaded file. You must have write permission for this directory.</li>
+                                        <li>
+                                            Download the package installer file for your platform into the download directory.
+                                        </li>
+                                        <li>Go to the download directory, and uncompress and untar the downloaded file.
+                                            <pre>bzcat <i>filename</i> | /bin/tar xvf -
+</pre>
+                                        </li>
+                                        <li>Follow the instructions in Chapter 2 of the <a href="http://docs.oracle.com/cd/E24457_01/html/E21988/index.html" target="_blank"><i>Oracle Solaris Studio 12.3 Installation Guide</i></a> to install the C compiler,
+                                            C++ compiler, and required Solaris patches.</li>
+                                        <li>Edit your <tt>PATH</tt> to add the path to the Oracle Solaris Studio 12.3 software before starting the NetBeans IDE.</li>
+                                        <li>See <a href="#verifying">Verifying the Installation</a> to verify that the tools were installed correctly for the NetBeans IDE.</li>
+                                    </ol>
+                                    <p><b>To install the Oracle Solaris Studio 12.3 compilers on Oracle Solaris 11:</b></p>
+                                    <ul>
+                                        <li>Go to the <a href="http://www.oracle.com/technetwork/server-storage/solarisstudio/downloads/index-jsp-141149.html" target="blank">Oracle Solaris Studio download page</a> and follow the instructions for Oracle Solaris
+                                            11 in the Package Installation column.
+                                        </li>
+                                    </ul>
+
+                                    <h4>GNU Compilers and GNU <tt>make</tt></h4>
+                                    <p>If you want to use the GNU compilers and GNU <tt>make</tt>:</p>
+                                    <ul>
+                                        <li>If you have a standard installation of Oracle Solaris 10 or Oracle Solaris 11, the compilers and
+                                            <tt>gmake</tt> are installed in <tt>/usr/sfw/bin</tt>. Make sure that this location is in your <tt>PATH</tt> before starting NetBeans IDE.</li>
+                                        <li>If the compilers and <tt>gmake</tt> are not installed on your system, you can download them from
+                                            <a href="http://www.sunfreeware.com/" target="_blank">http://www.sunfreeware.com</a>.</li>
+                                    </ul>
+
+                                    <p><b>To download and install the GNU compilers and make utility</b></p>
+                                    <ol>
+                                        <li>Download <tt>gcc</tt> and <tt>make</tt>.</li>
+                                        <li>If the download zip files are not automatically extracted during download, unzip them with <tt>gunzip</tt>.
+                                        </li>
+                                        <li>Install the packages with the <tt>pkgadd</tt> command.</li>
+                                        <li>Make sure to include the GNU compiler directory and the GNU make directory in your path before starting the NetBeans IDE.
+                                        </li>
+                                        <li>See <a href="#verifying">Verifying the Installation</a> to verify that the tools were installed correctly for the NetBeans IDE.</li>
+                                    </ol>
+
+
+                                    <h4><tt>gdb</tt> Debugger</h4>
+                                    <p>Whether you use the Oracle Solaris Studio compilers and Solaris <tt>make</tt> or the GNU compilers and GNU <tt>make</tt>, you must have the <tt>gdb</tt> debugger to debug applications in NetBeans IDE. You can download
+                                        <tt>gdb</tt> from
+                                        <a href="http://www.sunfreeware.com/" target="_blank">http://www.sunfreeware.com</a>.
+                                    </p>
+                                    <p><b>To download and install <tt>gdb</tt> for Oracle Solaris 10:</b></p>
+                                    <ol>
+                                        <li>Download <tt>gdb</tt> 6.8.</li>
+                                        <li>If the download zip file is not automatically extracted during download, unzip it with <tt>gunzip</tt>.
+                                        </li>
+                                        <li>Install the package with the <tt>pkgadd</tt> command.</li>
+                                        <li>Make sure to include the path to <tt>gdb</tt> in your <tt>PATH</tt> before starting the NetBeans IDE.</li>
+                                        <li>See <a href="#verifying">Verifying the Installation</a> to verify that the tools were installed correctly for the NetBeans IDE.</li>
+                                    </ol>
+                                    <p>On Oracle Solaris 11, you can install gdb 6.8 from the pkg.oracle.com repository.</p>
+
+
+                                    <!-- COMPILER SETUP: LINUX OS +++++++++++++++++++++++++ -->
+                                    <h3><a name="compilers_linux"></a>Linux</h3>
+                                    <p>On Linux platforms, you can use GNU tools or Oracle Solaris Studio tools.</p>
+                                    <p>NetBeans IDE has been tested with the following compilers and tools:</p>
+
+
+                                    <table>
+                                        <tbody>
+
+                                            <tr>
+                                                <th class="tblheader" scope="col">Software or Resource</th>
+                                                <th class="tblheader" scope="col">Version Tested</th>
+                                                <th class="tblheader" scope="col">Description</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>cc</tt></td>
+                                                <td class="tbltd1"> 5.10, 5.11, 5.12 </td>
+                                                <td class="tbltd1">Sun Studio 12 Update 1, Oracle Solaris Studio 12.2, and Oracle Solaris Studio 12.3 compilers</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>CC</tt></td>
+                                                <td class="tbltd1"> 5.10, 5.11, 5.12 </td>
+                                                <td class="tbltd1">Sun Studio 12 Update 1, Oracle Solaris Studio 12.2, and Oracle Solaris Studio 12.3 compilers</td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td class="tbltd1"><tt>gcc</tt></td>
+                                                <td class="tbltd1">4.6.3 and 4.7.2</td>
+                                                <td class="tbltd1">GNU C compiler</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>g++</tt></td>
+                                                <td class="tbltd1">4.6.3 and 4.7.2</td>
+                                                <td class="tbltd1">GNU C++ compiler</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>gdb</tt></td>
+                                                <td class="tbltd1">7.4 and 7.5 </td>
+                                                <td class="tbltd1">GNU debugger</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>gmake</tt></td>
+                                                <td class="tbltd1">3.81</td>
+                                                <td class="tbltd1">GNU make</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>dmake</tt></td>
+                                                <td class="tbltd1">7.9, 8.0, 8.1</td>
+                                                <td class="tbltd1">Sun Studio 12 Update 1, Oracle Solaris Studio 12.2, and Oracle Solaris Studio 12.3 distributed make utility</td>
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    <br>
+                                    <br>
+
+                                    <h4>Oracle Solaris Studio 12.2 Compilers on Linux</h4>
+                                    <p>If you want to use the Oracle Solaris Studio 12.3 compilers in a Linux OS:</p>
+                                    <ul>
+                                        <li>If you have Oracle Solaris Studio 12.3 software installed, ensure that <tt>/<i>installation
+directory</i>/solarisstudio12.3/bin</tt> is in your path before you start the NetBeans IDE. The default location is <tt>/opt/oracle/solarisstudio12.3/bin</tt> when installing with Linux packages.</li>
+                                        <li>
+                                            If you do not have Oracle Solaris Studio 12.3 software installed, you can download it free at
+                                            <a href="http://www.oracle.com/technetwork/server-storage/solarisstudio/downloads/index-jsp-141149.html" target="_blank">
+                                                <tt>http://www.oracle.com/technetwork/server-storage/solarisstudio/downloads/index-jsp-141149.html</tt></a>.
+                                        </li>
+                                    </ul>
+
+                                    <p><b>To download and install the Oracle Solaris Studio 12.3 compilers:</b></p>
+                                    <ol>
+
+                                        <li>Create a directory for the downloaded file. You must have write permission for this directory.</li>
+                                        <li>If your browser is set to download to a particular location such as your Desktop or a Downloads directory without prompting, set the browser preferences to download to the directory you created. For Firefox, the
+                                            download directory is set in Edit &gt; Preferences &gt; Main.</li>
+
+                                        <li>Download the file for your platform into the download directory you created. If you are using Ubuntu, download the tarfile installation into the directory where you want to install it because the packages are for
+                                            Oracle Linux, Red Hat Enterprise Linux, and SuSE Linux Enterprise System. Note also that Ubuntu is not an officially supported platform for Oracle Solaris Studio IDE, but the compilers have been tested for use
+                                            in NetBeans IDE and been found to work.
+                                        </li>
+                                        <li>Go to the download directory, and uncompress and untar the downloaded file.
+                                            <pre>bzcat <i>filename</i> | tar xvf -
+</pre>
+                                        </li>
+                                        <li>
+                                            If you downloaded the RPM packages, follow the instructions in Chapter 2 of the <a href="http://download.oracle.com/docs/cd/E18659_01/html/821-1385/index.html" target="_blank"><i>Oracle Solaris Studio 12.3 Installation Guide</i></a>                                            to install the C compiler, C++ compiler, and Fortran compiler.</li>
+
+
+                                        <li>Edit your <tt>PATH</tt> to add the path to the Oracle Solaris Studio software before starting the NetBeans IDE.</li>
+                                        <li>See <a href="#verifying">Verifying the Installation</a> to verify that the tools were installed correctly for the NetBeans IDE.</li>
+                                    </ol>
+                                    <p><b>To download and install the GNU debugger in Oracle Linux or Red Hat Enterprise Linux, type:</b></p>
+                                    <pre>yum install gdb</pre>
+
+                                    <p><b>To download and install the GNU debugger in Ubuntu, type:</b></p>
+                                    <pre>sudo apt-get install gdb</pre>
+
+
+                                    <!-- COMPILER SETUP: MAC OS X ---------------------------------->
+                                    <h3><a name="compilers_mac"></a>OS X</h3>
+
+                                    <p>
+                                        NetBeans IDE has been tested with the following compilers and tools:</p>
+
+                                    <table>
+                                        <tbody>
+
+                                            <tr>
+                                                <th class="tblheader" scope="col">Software or Resource</th>
+                                                <th class="tblheader" scope="col">Version Tested</th>
+                                                <th class="tblheader" scope="col">Description</th>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td class="tbltd1"><tt>gcc</tt></td>
+                                                <td class="tbltd1">4.2.1</td>
+                                                <td class="tbltd1">GNU C compiler in Mac OS X 10.6</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>g++</tt></td>
+                                                <td class="tbltd1">4.2.1</td>
+                                                <td class="tbltd1">GNU C++ compiler in Mac OS X 10.6</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>gdb</tt></td>
+                                                <td class="tbltd1">6.3.5</td>
+                                                <td class="tbltd1">GNU debugger in Mac OS X 10.6</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="tbltd1"><tt>make</tt></td>
+                                                <td class="tbltd1">3.81</td>
+                                                <td class="tbltd1">GNU make in Mac OS X 10.6</td>
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                    <br>
+                                    <p>Install the following packages that are provided with your OS X:</p>
+                                    <ul>
+                                        <li>Xcode</li>
+                                        <li>X11</li>
+                                    </ul>
+                                    <p>These packages can also be downloaded from
+                                        <a href="http://developer.apple.com/mac" target="_blank">Apple Developer Connection</a> with the free ADC membership.</p>
+
+                                </div>
+
+                                <br>
+                                <!-- VERIFYING THE INSTALLATION ------------------------------------------>
+                                <h2><a name="verifying">Verifying the Installation</a></h2>
+                                <p>To verify that the installation is correct, start the NetBeans IDE, build a sample project, and run it in the <tt>gdb</tt> debugger.</p>
+
+                                <div class="indent">
+                                    <h3><a name="start">Start the NetBeans IDE</a></h3>
+                                    <p><b>To start the IDE, do one of the following:</b></p>
+                                    <ul>
+                                        <li>Double-click the NetBeans IDE icon on the desktop.</li>
+                                        <li>On Linux or Solaris platforms, navigate to the <tt>bin</tt> subdirectory of your NetBeans installation and type <tt>./netbeans</tt>.
+                                        </li>
+                                        <li>Launch the NetBeans IDE through the desktop menu.
+                                            <br>This method is available on Windows platforms, but might not be available on the Oracle Solaris 10 and Oracle Solaris 11 platforms and some Linux platforms.</li>
+                                    </ul>
+
+                                    <h3><a name="test"></a>Build a Sample Project to Test the Tools</h3>
+                                    <p>On all platforms, you can build a sample project to test the compiler installation, and run it in the debugger to test the gdb installation.</p>
+                                    <p><b>To build a sample project and run it in the debugger:</b></p>
+                                    <ol>
+                                        <li>Open the New Project wizard by choosing File &gt; New Project.</li>
+                                        <li>In the Categories panel on the Choose Project page of the wizard, expand the Samples category and select the C/C++ subcategory.</li>
+                                        <li>In the Projects panel, select the <tt>Welcome</tt> project. Click Next.
+                                        </li>
+                                        <li>On the Project Name and Location page, click Finish.
+                                        </li>
+                                        <li>In the Projects window, right-click the <tt>Welcome_1</tt> project and choose Build. If your compilers and <tt>make</tt> utility are installed correctly and the path to them is set, build output is displayed in
+                                            the Output window and the project builds successfully.
+                                        </li>
+                                        <li>Expand the Source Files node of the project and double-click the <tt>welcome.cc</tt> file to open it in the Source Editor.
+                                        </li>
+                                        <li>Set a breakpoint by clicking in the left margin of the Source Editor window next to any line.
+                                        </li>
+                                        <li>Right-click the project and choose Debug. If the <tt>gdb</tt> debugger is installed correctly and the path to it is set, <tt>gdb</tt> starts up, the Debugger tabs are displayed, and the Welcome application runs
+                                            and stops at the breakpoint.
+                                        </li>
+                                        <li>Choose Debug &gt; Continue to run the application to completion.
+                                        </li>
+                                        <li>If the project doesn't build or debugger doesn't work, see the next section.</li>
+                                    </ol>
+                                </div>
+
+                                <h2><a name="ts"></a>Troubleshooting Tool Issues</h2>
+                                <ol>
+                                    <li>Select Tools &gt; Options and click C/C++ in the top panel of the Options dialog box.</li>
+                                    <li>In the Build Tools tab, look at the Tool Collection list to see if your tool collection is listed.</li>
+                                    <li>Select the tool collection if it is listed, and check the paths to the tools. If the Base Directory path is incorrect, you may have made a mistake when setting your path environment variable. Refer back to the instructions
+                                        for setting the path in the section for your platform in this document, and correct the path if necessary.</li>
+                                    <li>If the tool collection is not listed, click Restore Defaults. This will cause the IDE to rescan your environment to look for tools and the tool collection should be found if the path environment variable is correct.</li>
+                                    <li>If you are still having an issue, try adding a new tool collection and specifying the path to the tools, as follows:
+                                        <ol type="a">
+                                            <li>Click Add below the Tool Collection list.</li>
+                                            <li>Browse to the directory that contains the executables for the compilers, debugger, and make utility. This is usually the <tt>bin</tt> directory.</li>
+                                            <li>Select the directory and click Open. The IDE should be able to determine the family of the tools and update the other fields in the dialog box appropriately. If not, an error is displayed.</li>
+                                            <li>If the tools are identified correctly, click OK in the Add Tool Collection dialog box. The new collection should be displayed in the list.</li>
+                                            <li>Select the new tool collection and click Default to make sure this tool collection is used automatically for new projects.</li>
+                                        </ol>
+                                        <p class="tips">If you cannot solve the problem, ask for help at the
+                                            <a href="http://forums.netbeans.org/cnd-users.html" target="_blank">NetBeans C/C++ User Forum</a>.</p>
+                                    </li>
+                                </ol>
+
+                                <!-- NEXT STEPS -->
+                                <br>
+                                <h2>Next Steps</h2>
+                                <p>To learn quickly how to develop a C or C++ application with the NetBeans IDE, see the <a href="../../../kb/docs/cnd/quickstart.html">C/C++
+Projects Quick Start Tutorial</a>.
+                                </p>
+                                <h2>See Also</h2>
+                                <ul>
+                                    <li>See the
+                                        <a href="https://netbeans.org/kb/trails/cnd.html">C/C++ Learning Trail</a> for more articles about developing with C/C++/Fortran in NetBeans IDE.</li>
+                                    <li>See the <a href="http://wiki.netbeans.org/HowToCreate64-BitC/C++WindowsProgramWithNetBeans">HowToCreate64-BitC/C++WindowsProgramWithNetBeans</a> wiki page for information on how to setup NetBeans IDE to create 64-bit
+                                        C/C++ Windows executables.</li>
+                                </ul>
+                                <div class="feedback-box">
+                                    <script language="JavaScript" type="text/javascript">
+                                        <!--
+                                        var user = "&#117;&#115;&#101;&#114;&#115;";
+                                        var domain =
+                                            "&#99;&#110;&#100;&#46;&#110;&#101;&#116;&#98;&#101;&#97;&#110;&#115;&#46;&#111;&#114;&#103;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#70;&#101;&#101;&#100;&#98;&#97;&#99;&#107;&#58;&#37;&#50;&#48;&#67;&#111;&#110;&#102;&#105;&#103;&#117;&#114;&#105;&#110;&#103;&#37;&#50;&#48;&#116;&#104;&#101;&#37;&#50;&#48;&#78;&#101;&#116;&#66;&#101;&#97;&#110;&#115;&#37;&#50;&#48;&#73;&#68;&#69;&#37;&#50;&#48;&#102;&#111;&#114;&#37;&#50;&#48;&#67;&#47;&#67;&#43;&#43;&#47;&#70;&#111;&#114;&#116;&#114;&#97;&#110;&#37;&#50;&#48;&#45;&#37;&#50;&#48;&#78;&#101;&#116;&#66;&#101;&#97;&#110;&#115;&#37;&#50;&#48;&#73;&#68;&#69;&#37;&#50;&#48;&#55;&#46;&#51;";
+                                        var at = "&#x40;";
+                                        document.write('<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;' + user + at + domain + '">Send Us Your Feedback</a>');
+                                        //-->
+                                    </script><a href="mailto:users@cnd.netbeans.org?subject=Feedback:%20Configuring%20the%20NetBeans%20IDE%20for%20C/C++/Fortran%20-%20NetBeans%20IDE%207.3">Send Us Your Feedback</a>
+                                    <noscript>
+                                        &lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#117;&amp;#115;&amp;#101;&amp;#114;&amp;#115;&amp;#x40;&amp;#99;&amp;#110;&amp;#100;&amp;#46;&amp;#110;&amp;#101;&amp;#116;&amp;#98;&amp;#101;&amp;#97;&amp;#110;&amp;#115;&amp;#46;&amp;#111;&amp;#114;&amp;#103;&amp;#63;&amp;#115;&amp;#117;&amp;#98;&amp;#106;&amp;#101;&amp;#99;&amp;#116;&amp;#61;&amp;#70;&amp;#101;&amp;#101;&amp;#100;&amp;#98;&amp;#97;&amp;#99;&amp;#107;&amp;#58;&amp;#37;&amp;#50;&amp;#48;&amp;#67;&amp;#111;&amp;#110;&amp;#102;&amp;#105;&amp;#103;&amp;#117;&amp;#114;&amp;#105;&amp;#110;&amp;#103;&amp;#37;&amp;#50;&amp;#48;&amp;#116;&amp;#104;&amp;#101;&amp;#37;&amp;#50;&amp;#48;&amp;#78;&amp;#101;&amp;#116;&amp;#66;&amp;#101;&amp;#97;&amp;#110;&amp;#115;&amp;#37;&amp;#50;&amp;#48;&amp;#73;&amp;#68;&amp;#69;&amp;#37;&amp;#50;&amp;#48;&amp;#102;&amp;#111;&amp;#114;&amp;#37;&amp;#50;&amp;#48;&amp;#67;&amp;#47;&amp;#67;&amp;#43;&amp;#43;&amp;#47;&amp;#70;&amp;#111;&amp;#114;&amp;#116;&amp;#114;&amp;#97;&amp;#110;&amp;#37;&amp;#50;&amp;#48;&amp;#45;&amp;#37;&amp;#50;&amp;#48;&amp;#78;&amp;#101;&amp;#116;&amp;#66;&amp;#101;&amp;#97;&amp;#110;&amp;#115;&amp;#37;&amp;#50;&amp;#48;&amp;#73;&amp;#68;&amp;#69;&amp;#37;&amp;#50;&amp;#48;&amp;#55;&amp;#46;&amp;#51;"&gt;Send
+                                        Us Your Feedback&lt;/a&gt;
+                                    </noscript>
+                                </div>
+
+
+                            </div>
+                        </td>
+                        <td class="valign-top rcol b-left" id="rc">
+                            <div id="loginbox" class="b-bottom bg-bege align-center">Not logged in. <a href="/people/login?original_uri=%2Fcommunity%2Freleases%2F73%2Fcpp-setup-instructions.html"><b>Log in</b></a>, <a href="/people/new">Register</a>
+                            </div>
+
+                            <div class="f-page-cell b-bottom">
+                                <h2 style="border:0px;" class="nav">Releases &amp; Planning</h2>
+                                <ul style="padding-left:15px;">
+                                    <li><a href="/community/releases/roadmap.html">Release Roadmap</a></li>
+                                    <li><a href="/community/releases/81/">NetBeans 8.1</a></li>
+                                    <li><a href="/community/releases/80/">NetBeans 8.0</a></li>
+                                    <li><a href="/community/releases/74/">NetBeans 7.4</a></li>
+                                    <li><a href="/community/releases/73/">NetBeans 7.3</a></li>
+                                    <li><a href="/community/releases/72/">NetBeans 7.2</a></li>
+                                    <li><a href="/community/releases/71/">NetBeans 7.1</a></li>
+                                    <li><a href="/community/releases/70/">NetBeans 7.0</a></li>
+                                    <li><a href="/community/releases/old.html">Earlier Releases</a></li>
+                                </ul>
+                            </div>
+                            <div class="f-page-cell b-bottom">
+                                <h2 style="border:0px;" class="nav">How Do I</h2>
+                                <a href="/community/issues.html">File Bugs</a>
+                                <br>
+                                <br>
+                                <a href="/community/contribute/code.html">Contribute Code</a>
+                                <br>
+                                <br>
+                                <ul>
+                                    <li><a href="/community/contribute/patches.html">Contribute Patches</a></li>
+                                    <li><a href="/community/contribute/modules.html">Contribute Modules</a></li>
+                                    <li><a href="/community/sources/">Get the Sources</a></li>
+                                    <li><a href="/community/contribute/hg.html">Get Mercurial Access</a></li>
+                                    <li><a href="/community/guidelines/commit.html">Commit Rules</a></li>
+                                    <li><a href="http://bits.netbeans.org/download/trunk/nightly/latest/">Get Development Builds</a></li>
+                                </ul>
+                                <a href="http://wiki.netbeans.org/CommunityDocs">Contribute Documentation</a>
+                                <br>
+                                <br>
+                                <a href="http://platform.netbeans.org/">Develop RCP Apps on the NetBeans Platform</a>
+                                <br>
+                                <br>
+                                <a href="http://bits.netbeans.org/dev/javadoc/index.html">NetBeans Platform APIs</a>
+                                <br>
+                                <br>
+                                <a href="/community/guidelines/index.html">Guidelines</a>
+                                <br>
+                                <br>
+                            </div>
+
+                            <div class="f-page-cell b-bottom">
+                                <h2 style="border:0px;" class="nav">Get Connected</h2>
+                                <a href="/community/lists/">Mailing Lists</a>
+                                <br>
+                                <br>
+                                <ul>
+                                    <li><a href="/community/lists/top.html">Subscribing &amp; Unsubscribing</a></li>
+                                    <li><a href="/community/lists/unsubscribe.html">Troubleshooting</a></li>
+                                    <li><a href="/community/lists/query.html">Subscription Query</a></li>
+                                    <li><a href="http://wiki.netbeans.org/NetBeansUserFAQ#Mailing_Lists">List FAQs</a></li>
+                                </ul>
+
+                                <a href="http://wiki.netbeans.org/">NetBeans Wiki</a>
+                                <br>
+                                <br>
+                                <a href="http://www.planetnetbeans.org/">Blogs</a>
+                                <br>
+                                <br>
+                                <a href="/community/news/">News</a>
+                                <br>
+                                <br>
+                                <a href="/community/news/calendar.html">Events</a>
+                                <br>
+                                <br>
+                                <a href="http://edu.netbeans.org">Teach with NetBeans IDE </a>
+                                <br>
+                                <br>
+                                <a href="/community/contribute/localise.html">Translate NetBeans IDE </a>
+                                <br>
+                                <br>
+                            </div>
+                            <br>
+
+                        </td>
+                    </tr>
+                    <!-- end main content -->
+                </tbody>
+            </table>
+            <!-- end main content table -->
+        </div>
+        <!-- end fixed-contentbox-ie -->
+        <!-- end fixed-contentarea -->
+        <div id="ftr">
+            <ul class="float-right" id="social-media">
+                <li>
+                    <a href="http://www.facebook.com/NetBeans"><img src="/images_www/v7/design/icin_facebook.png" width="30" height="30" alt="facebook"></a>
+                </li>
+                <li>
+                    <a href="http://www.youtube.com/user/netbeansvideos"><img src="/images_www/v7/design/icin_youtube.png" width="30" height="30" alt="youtube"></a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/105597468329838196909/"><img src="/images_www/v7/design/icin_google.png" width="30" height="30" alt="google+"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/netbeans"><img src="/images_www/v7/design/icin_twitter.png" width="30" height="30" alt="twitter"></a>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="/sitemaps/www_map.html">SiteMap</a></li>
+                <li><a href="/about/index.html">About Us</a></li>
+                <li><a href="/about/contact.html">Contact</a></li>
+                <li><a href="/about/legal/index.html">Legal &amp; Licences</a></li>
+            </ul>
+
+        </div>
+        <div id="tof" class="align-right">
+            By use of this website, you agree to the <a href="/about/legal/terms-of-use.html">NetBeans Policies and Terms of Use</a>. © 2016, Oracle Corporation and/or its affiliates. Sponsored by <img src="/images_www/v7/design/logo_oracle.png" width="56"
+                height="8" alt="Oracle logo">
+        </div>
+        <div id="companion-projects">
+            <script type="text/javascript">
+                document.write(renderCompanionProjectIcons());
+            </script>
+        </div>
+
+        <!-- Begin SiteCatalyst code -->
+        <script language="JavaScript" src="/images_www/js/s_code_remote.js" type="text/javascript"></script>
+        <script type="text/javascript" src="https://netbeans.org/images_www/js/metrics_group1.js"></script>
+        <!-- End SiteCatalyst code -->
+
+    </div>
+
+</body>
+
+</html>
