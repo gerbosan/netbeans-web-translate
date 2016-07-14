@@ -86,7 +86,8 @@ Copyright (c) 2011, Oracle and/or its affiliates. All rights reserved.
                                 <!-- START INTRO +++++++ -->
                                 <div class="articledate" style="margin-left: 0px;font-style:italic;"><em>Febrero 2013</em> [Revisión número: V7.3-1]</div>
 
-                                <p>Este documento proporciona información sobre la descarga, instalación y configuración de soporte de C/C++ en el IDE NetBeans. Antes de comenzar a desarrollar en C/C++, el IDE NetBeans require el módulo plugin C/C++ y compiladores C/C++ de terceros, utilidades <code>make</code> y debuggers.
+                                <p>Este documento proporciona información sobre la descarga, instalación y configuración de soporte de C/C++ en el IDE NetBeans. Antes de comenzar a desarrollar en C/C++, el IDE NetBeans require el módulo plugin C/C++ y compiladores
+                                    C/C++ de terceros, utilidades <code>make</code> y debuggers.
                                 </p>
 
                                 <!-- END INTRO -->
@@ -126,17 +127,20 @@ Copyright (c) 2011, Oracle and/or its affiliates. All rights reserved.
                                 <!-- DOWNLOADING ---------------------------------------------------------->
                                 <h2><a name="downloading">Habilitando C/C++/Fortran en el IDE</a></h2>
                                 <p>
-                                    El IDE NetBeans es un IDE modular dinámico, puede ser modificado añadiendo y quitando módulos del programa. Puede añadir funcionalidades añadiendo módulos plugin o quitar funcionalidades desintalando módulos plugin. Revise la ayuda en línea del IDE NetBeans para más información acerca de los plugins.</p>
+                                    El IDE NetBeans es un IDE modular dinámico, puede ser modificado añadiendo y quitando módulos del programa. Puede añadir funcionalidades añadiendo módulos plugin o quitar funcionalidades desintalando módulos plugin. Revise la ayuda en línea del IDE NetBeans
+                                    para más información acerca de los plugins.</p>
                                 <p>
                                     Si desea trabajar con programas en C, C++, o Fortran con el IDE NetBeans, su instalación de NetBeans debe incluir el plugin C/C++.</p>
                                 <p class="tips">Aunque el plugin se llame C/C++, también incluye soporte para programación en Fortran.</p>
 
                                 <div class="indent">
                                     <h3>Si todavía no ha instalado el IDE NetBeans 7.3</h3>
-                                    <p>Si todavía no ha instalado el IDE NetBeans, descargue el paquete con <b>C/C++</b> o el paquete con <b>Todo</b> de <a href="https://netbeans.org/downloads/index.html">la Página de Descarga del IDE NetBeans 7.3</a>. Si no va a usar otros lenguajes como Java y Ruby, debe descargar el paquete C/C++.</p>
+                                    <p>Si todavía no ha instalado el IDE NetBeans, descargue el paquete con <b>C/C++</b> o el paquete con <b>Todo</b> de <a href="https://netbeans.org/downloads/index.html">la Página de Descarga del IDE NetBeans 7.3</a>. Si
+                                        no va a usar otros lenguajes como Java y Ruby, debe descargar el paquete C/C++.</p>
 
                                     <h3>Si ya tiene el IDE NetBeans 7.3 pero desconoce si tiene el plugin C/C++</h3>
-                                    <p>Si ya tiene el IDE NetBeans, verifique que el IDE NetBeans incluye el plugin C/C++ seleccionado Archivo &gt; Proyecto Nuevo. Si C/C++ está listado como una de las Categorías, ya dispone del módulo plugin C/C++. Debe pasar a la sección <a href="#compilers">Instalando y Configurando los Compiladores y Herramientas</a>.
+                                    <p>Si ya tiene el IDE NetBeans, verifique que el IDE NetBeans incluye el plugin C/C++ seleccionado Archivo &gt; Proyecto Nuevo. Si C/C++ está listado como una de las Categorías, ya dispone del módulo plugin C/C++. Debe
+                                        pasar a la sección <a href="#compilers">Instalando y Configurando los Compiladores y Herramientas</a>.
                                     </p>
 
                                     <h3>Si ya tiene el IDE NetBeans 7.3 sin el plugin C/C++</h3>
@@ -189,8 +193,10 @@ Copyright (c) 2011, Oracle and/or its affiliates. All rights reserved.
                                 <!--<blockquote>-->
                                 <div class="indent">
                                     <h3><a name="compilers_windows"></a>Microsoft Windows</h3>
-                                    <p>El módulo C/C++ de NetBeans ha sido probado con compiladores de Cygwin y MinGW. Si instala ambos, Cygwin y MinGW, se cuidadoso al mantener separada la localizacion de las instalciones y de no mezclar las herramientas de Cygwin y MinGW en una colección de herramientas en el IDE.</p>
-                                    <p class="notes"><strong>Nota.</strong> Si quiere usar Qt con Windows, debe usar MinGW. Vea el artículo <a href="../../../kb/72/cnd/qt-applications.html">Working with Qt Applications</a> por las instrucciones para instalar MinGW y software de Qt.</p>
+                                    <p>El módulo C/C++ de NetBeans ha sido probado con compiladores de Cygwin y MinGW. Si instala ambos, Cygwin y MinGW, se cuidadoso al mantener separada la localizacion de las instalciones y de no mezclar las herramientas
+                                        de Cygwin y MinGW en una colección de herramientas en el IDE.</p>
+                                    <p class="notes"><strong>Nota.</strong> Si quiere usar Qt con Windows, debe usar MinGW. Vea el artículo <a href="../../../kb/72/cnd/qt-applications.html">Working with Qt Applications</a> por las instrucciones para instalar MinGW y software
+                                        de Qt.</p>
 
                                     <table class="b-none vatop" cellpadding="0" cellspacing="0">
                                         <tbody>
@@ -251,7 +257,8 @@ Copyright (c) 2011, Oracle and/or its affiliates. All rights reserved.
                                         </tbody>
                                     </table>
                                     <br>
-                                    <p>Si ya cuenta con los compiladores gcc y g++ de Cygwin, <tt>make</tt> de GNU, y el debugger <tt>gdb</tt> instalado en su sistema Windows y su ruta está configurada correctamente, asergurese de contar con las versiones correctas.
+                                    <p>Si ya cuenta con los compiladores gcc y g++ de Cygwin, <tt>make</tt> de GNU, y el debugger <tt>gdb</tt> instalado en su sistema Windows y su ruta está configurada correctamente, asergurese de contar con las versiones
+                                        correctas.
                                     </p>
 
                                     <p><b>Para revisar las versiones de compiladores y herramientas de Cygwin:</b></p>
@@ -269,12 +276,14 @@ C:\&gt; gdb --version
                                         </li>
                                     </ol>
                                     <p>
-                                        Si cuenta con las versiones correctas, no es requerida la configuración. Vea <a href="#verifying">Verificando la Instalación</a> para verificar que las herramientas están instaladas correctamente para el IDE de NetBeans.</p>
+                                        Si cuenta con las versiones correctas, no es requerida la configuración. Vea <a href="#verifying">Verificando la Instalación</a> para verificar que las herramientas están instaladas correctamente para el IDE de
+                                        NetBeans.</p>
 
                                     <p><b>Para instalar los compiladores gcc y g++, <tt>make</tt>, el debugger <tt>gdb</tt> de GNUT de |<a href="http://cygwin.com/" target="blank">cygwin.com</a>:</b></p>
                                     <ol>
                                         <li>Revise <a href="http://cygwin.com/cygwin-ug-net/index.html" target="_blank">Cygwin User's Guide</a> para información complera acerca de la instalaciín y uso de Cygwin.</li>
-                                        <li>Descargue el programa <tt>setup.exe</tt> de Cygwin haciendo clic en Install Cygwin en la barra de navegación izquierda o haciendo clic directamente en el enlace <a href="http://www.cygwin.com/setup.exe">
+                                        <li>Descargue el programa <tt>setup.exe</tt> de Cygwin haciendo clic en Install Cygwin en la barra de navegación izquierda o haciendo clic directamente en el enlace
+                                            <a href="http://www.cygwin.com/setup.exe">
                                                 <tt>setup.exe</tt></a>.
                                         </li>
 
@@ -285,7 +294,7 @@ C:\&gt; gdb --version
                                             En la página Choose Download Site, escoger el sitio de descarga que crea que está más próxima. Haga clic en Next.
                                         </li>
                                         <li>
-                                            En la página Select Packages, selecciona los paquetes a descargar. Haga clic en + a lado de  Devel para expandir la categoría de herramientas de desarrollo. Puede ser necesario agrandar la ventana para ver más información.
+                                            En la página Select Packages, selecciona los paquetes a descargar. Haga clic en + a lado de Devel para expandir la categoría de herramientas de desarrollo. Puede ser necesario agrandar la ventana para ver más información.
                                         </li>
                                         <li>
                                             Seleccione cada paquete que desee descargar haciendo clic en la etiqueta Skip, que revela el número de versión de los paquetes a descargar. Como mínimo, seleccione
@@ -312,7 +321,8 @@ C:\&gt; gdb --version
                                                     <br> - En Windows 7, escriba <b>var</b> en la caja de búsqueda del menú Inicio para encontrar rápido el enlaces para Editar las variables de entorno del sistema.</li>
                                                 <li>Elija la lengüeta Avanzado y haga clic en Variables de Entorno.</li>
                                                 <li>En el panel de Variables de Sistema del dialogo Variables de Entorno, elija la variable <tt>Path</tt> y haga clic en Editar.</li>
-                                                <li>Añada la ruta del <tt><i>directorio-cygwin</i>\bin</tt> en la variable <tt>Path</tt> y haga clic en  Aceptar. Por defecto el, <tt><i>directorio-cygwin</i></tt> es <tt>C:\cygwin</tt>. Los nombres de los directorios deben estar separados con punto y coma. La ruta editada debe verse como <tt>%SystemRoot%\system32;%SystemRoot%;C:\Program Files\QuickTime\QTSystem;C:\cygwin\bin</tt></li>
+                                                <li>Añada la ruta del <tt><i>directorio-cygwin</i>\bin</tt> en la variable <tt>Path</tt> y haga clic en Aceptar. Por defecto el, <tt><i>directorio-cygwin</i></tt> es <tt>C:\cygwin</tt>. Los nombres de los directorios
+                                                    deben estar separados con punto y coma. La ruta editada debe verse como <tt>%SystemRoot%\system32;%SystemRoot%;C:\Program Files\QuickTime\QTSystem;C:\cygwin\bin</tt></li>
                                                 <li>Haga clic en Aceptar en el dialogo de Variables de Entorno y el dialogo de Propiedades de Sistema.
                                                 </li>
                                                 <li>Vea <a href="#verifying">Verificando la Instalación</a> para verificar que las herramientas están instaladas correctamente para el IDE NetBeans.</li>
@@ -359,7 +369,7 @@ C:\&gt; gdb --version
                                             <tr>
                                                 <td class="tbltd1"><tt>make</tt></td>
                                                 <td class="tbltd1">3.81</td>
-                                                <td class="tbltd1">Utilidad <tt>make</tt> de  MSYS
+                                                <td class="tbltd1">Utilidad <tt>make</tt> de MSYS
                                                     <br> Notar que el make de MinGW no está soportado</td>
 
                                             </tr>
@@ -397,7 +407,8 @@ C:\&gt; gdb --version
                                             </ul>
                                         </li>
                                         <li>En la ventana de Variables de Entorno, seleccionar la variable Ruta en la sección Variable de Sistema y haga clic en Editar.</li>
-                                        <li>Al final de la ruta, inserte un punto y coma y añada las rutas de los ejecutables para MinGW y MSYS. Use punto y coma entre las rutas y no introduzca espacio alguno. Tenga cuidado de no eliminar el contenido de su RUTA o su computadora no podrá funcionar correctamente.
+                                        <li>Al final de la ruta, inserte un punto y coma y añada las rutas de los ejecutables para MinGW y MSYS. Use punto y coma entre las rutas y no introduzca espacio alguno. Tenga cuidado de no eliminar el contenido de
+                                            su RUTA o su computadora no podrá funcionar correctamente.
                                             <br>
                                             <p>Cuando termine, su ruta se verá parecido a:</p>
                                             <pre>%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;
@@ -410,49 +421,49 @@ C:\&gt; gdb --version
                                     <!-- COMPILER SETUP: SOLARIS OS -------------------------------->
                                     <h3><a name="compilers_solaris"></a>Oracle Solaris</h3>
                                     <p>
-                                        On Oracle Solaris platforms, you can use GNU tools or Oracle Solaris Studio tools. The GNU tools are included in Oracle Solaris 10 and Oracle Solaris 11 in the <tt>/usr/sfw/bin</tt> directory by default. The Oracle
-                                        Solaris Studio software is a suite of developer tools that are free to download. The Oracle Solaris Studio compilers are optimized for Oracle Sun hardware, and make it easier to produce performance tuned Oracle
-                                        Solaris binaries.</p>
+                                        En las plataformas Oracle Solaris, puede usar herramientas GNU o herramientas Oracle Solaris Studio. Las herramientas GNU están incluidas en Oracle Solaris 10 y Oracle Solaris 11 por defecto en el directorio <tt>/usr/sfw/bin</tt>.
+                                        El software de Oracle Solaris Studio es una suite de herramientas para desarrolladores que es gratuita para descargar. Los compiladores de Oracle Solaris Studio están optimizados para hardware de Oracle Sun y la
+                                        producción de binarios de alto rendimiento para Oracle Solaris.</p>
 
-                                    <p>NetBeans IDE 7.3 has been tested with the following compilers and tools.</p>
+                                    <p>El IDE NetBeans 7.3 ha sido probado con los siguientes compiladores y herramientas.</p>
 
                                     <table>
                                         <tbody>
 
                                             <tr>
-                                                <th class="tblheader" scope="col">Software or Resource</th>
-                                                <th class="tblheader" scope="col">Version Tested</th>
-                                                <th class="tblheader" scope="col">Description</th>
+                                                <th class="tblheader" scope="col">Software o Recurso</th>
+                                                <th class="tblheader" scope="col">Versión Probada</th>
+                                                <th class="tblheader" scope="col">Descripción</th>
                                             </tr>
                                             <tr>
                                                 <td class="tbltd1"><tt>cc</tt></td>
                                                 <td class="tbltd1">5.10, 5.11, 5.12 </td>
-                                                <td class="tbltd1">Sun Studio 12 Update 1, Oracle Solaris Studio 12.2, and Oracle Solaris Studio 12.3 C compilers</td>
+                                                <td class="tbltd1">Compiladores C de Sun Studio 12 Update 1, Oracle Solaris Studio 12.2 y Oracle Solaris Studio 12.3</td>
 
                                             </tr>
                                             <tr>
                                                 <td class="tbltd1"><tt>CC</tt></td>
                                                 <td class="tbltd1">5.10, 5.11, 5.12 </td>
-                                                <td class="tbltd1">Sun Studio 12 Update 1, Oracle Solaris Studio 12.2, and Oracle Solaris Studio 12.3 C++ compilers</td>
+                                                <td class="tbltd1">Compiladores C++ de Sun Studio 12 Update 1, Oracle Solaris Studio 12.2 y Oracle Solaris Studio 12.3</td>
 
                                             </tr>
 
                                             <tr>
                                                 <td class="tbltd1"><tt>gcc</tt></td>
                                                 <td class="tbltd1">3.4.3, 3.4.6</td>
-                                                <td class="tbltd1">GNU C compilers</td>
+                                                <td class="tbltd1">Compiladores GNU C</td>
 
                                             </tr>
                                             <tr>
                                                 <td class="tbltd1"><tt>g++</tt></td>
                                                 <td class="tbltd1">3.4.3, 3.4.6 </td>
-                                                <td class="tbltd1">GNU C++ compilers</td>
+                                                <td class="tbltd1">Compiladores GNU C++</td>
 
                                             </tr>
                                             <tr>
                                                 <td class="tbltd1"><tt>gdb</tt></td>
                                                 <td class="tbltd1">6.8</td>
-                                                <td class="tbltd1">GNU debugger</td>
+                                                <td class="tbltd1">Debugger GNU</td>
 
                                             </tr>
                                             <tr>
@@ -470,127 +481,125 @@ C:\&gt; gdb --version
                                             <tr>
                                                 <td class="tbltd1"><tt>dmake</tt></td>
                                                 <td class="tbltd1">7.9, 8.0, 8.1 </td>
-                                                <td class="tbltd1">Sun Studio 12 Update 1, Oracle Solaris Studio 12.2, and Oracle Solaris Studio 12.3 distributed make utility</td>
+                                                <td class="tbltd1">Utilidad make distribuida por Sun Studio 12 Update 1, Oracle Solaris Studio 12.2 y Oracle Solaris Studio 12.3</td>
 
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <h4>Oracle Solaris Studio 12.3 Compilers</h4>
-                                    <p>If you want to use the Oracle Solaris Studio 12.3 compilers on Oracle Solaris 10 or Oracle Solaris 11:</p>
+                                    <h4>Compiladores de Oracle Solaris Studio 12.3</h4>
+                                    <p>Si desea usar los compiladores de Oracle Solaris Studio 12.3 en Oracle Solaris 10 o Oracle Solaris 11:</p>
                                     <ul>
-                                        <li>If you have Oracle Solaris Studio 12.3 software installed, ensure that <tt>/<i>installation
-directory</i>/solarisstudio12.3/bin</tt> is in your path before you start the NetBeans IDE. The default location on Solaris 10 and Solaris 11 is <tt>/opt/solarisstudio12.3/bin</tt></li>
+                                        <li>Si tiene instalado el software Oracle Solaris Studio 12.3, debe asegurarse que <tt>/<i>directoriodeinstalación</i>/solarisstudio12.3/bin</tt> está en su ruta antes de iniciar el IDE NetBeans. La localización por
+                                            defecto en Solaris 10 y Solaris 11 es <tt>/opt/solarisstudio12.3/bin</tt></li>
                                         <li>
-                                            If you do not have Oracle Solaris Studio 12.3 software installed, you can download it free at
-                                            <a href="http://www.oracle.com/technetwork/server-storage/solarisstudio/downloads/index-jsp-141149.html" target="_blank">
+                                            Si no tiene instalado el software Oracle Solaris Studio 12.3, puede descargarlo de manera gratuita en
+                                            <a href="http://www.oracle.com/technetwork/server-storage/solarisstudio/downloads/index-jsp-141149.html"
+                                                target="_blank">
                                                 <tt>http://www.oracle.com/technetwork/server-storage/solarisstudio/downloads/index-jsp-141149.html</tt></a>.</li>
                                     </ul>
 
-                                    <p><b>To download and install the Oracle Solaris Studio 12.3 compilers on
- Oracle Solaris 10:</b></p>
+                                    <p><b>Para descargar e instalar los compiladores de Oracle Solaris Studio 12.3 en Oracle Solaris 10:</b></p>
                                     <ol>
 
-                                        <li>Create a directory for the downloaded file. You must have write permission for this directory.</li>
+                                        <li>Crear un directorio para el archivo descargado. debe tener privilegios de esritura en el directorio.</li>
                                         <li>
-                                            Download the package installer file for your platform into the download directory.
+                                            Descargar el archivo instalador de paquetes para su plataforma en el directorio de descarga.
                                         </li>
-                                        <li>Go to the download directory, and uncompress and untar the downloaded file.
+                                        <li>Ir al directorio de descarga y descomprimir y desempaquetar el archivo descargado.
                                             <pre>bzcat <i>filename</i> | /bin/tar xvf -
 </pre>
                                         </li>
-                                        <li>Follow the instructions in Chapter 2 of the <a href="http://docs.oracle.com/cd/E24457_01/html/E21988/index.html" target="_blank"><i>Oracle Solaris Studio 12.3 Installation Guide</i></a> to install the C compiler,
-                                            C++ compiler, and required Solaris patches.</li>
-                                        <li>Edit your <tt>PATH</tt> to add the path to the Oracle Solaris Studio 12.3 software before starting the NetBeans IDE.</li>
-                                        <li>See <a href="#verifying">Verifying the Installation</a> to verify that the tools were installed correctly for the NetBeans IDE.</li>
+                                        <li>Siga las instrucciones en el Capítulo 2 de <a href="http://docs.oracle.com/cd/E24457_01/html/E21988/index.html" target="_blank"><i>Oracle Solaris Studio 12.3 Installation Guide</i></a> para instalar el compilador
+                                            C, C++ compiler y parches requeridos de Solaris.</li>
+                                        <li>Edite el <tt>PATH</tt> para añadir la ruta al software de Oracle Solaris Studio 12.3 antes de utilizar el IDE NetBeans.</li>
+                                        <li>Vea <a href="#verifying">Verificando la Instalación</a> para verificar qie la herramienta ha sido instalada correctamente para el IDE NetBeans.</li>
                                     </ol>
-                                    <p><b>To install the Oracle Solaris Studio 12.3 compilers on Oracle Solaris 11:</b></p>
+                                    <p><b>Para instalar los compiladores de Oracle Solaris Studio 12.3 en Oracle Solaris 11:</b></p>
                                     <ul>
-                                        <li>Go to the <a href="http://www.oracle.com/technetwork/server-storage/solarisstudio/downloads/index-jsp-141149.html" target="blank">Oracle Solaris Studio download page</a> and follow the instructions for Oracle Solaris
-                                            11 in the Package Installation column.
+                                        <li>Utilice la dirección <a href="http://www.oracle.com/technetwork/server-storage/solarisstudio/downloads/index-jsp-141149.html" target="blank">Oracle Solaris Studio download page</a> y siga las instrucciones de la
+                                            columna de Instalación de Paquete de Oracle Solaris 11.
                                         </li>
                                     </ul>
 
-                                    <h4>GNU Compilers and GNU <tt>make</tt></h4>
-                                    <p>If you want to use the GNU compilers and GNU <tt>make</tt>:</p>
+                                    <h4>Los Compiladores GNU y GNU <tt>make</tt></h4>
+                                    <p>Si quiere hacer uso de los compiladores GNU y GNU <tt>make</tt>:</p>
                                     <ul>
-                                        <li>If you have a standard installation of Oracle Solaris 10 or Oracle Solaris 11, the compilers and
-                                            <tt>gmake</tt> are installed in <tt>/usr/sfw/bin</tt>. Make sure that this location is in your <tt>PATH</tt> before starting NetBeans IDE.</li>
-                                        <li>If the compilers and <tt>gmake</tt> are not installed on your system, you can download them from
-                                            <a href="http://www.sunfreeware.com/" target="_blank">http://www.sunfreeware.com</a>.</li>
+                                        <li>Si tiene una instalación estándar de Oracle Solaris 10 o Oracle Solaris 11, los compiladores y <tt>gmake</tt> están instalados en <tt>/usr/sfw/bin</tt>. Asegúrese que esta localización esta en su <tt>PATH</tt> antes
+                                            de iniciar el IDE NetBeans.</li>
+                                        <li>Si los compiladores y <tt>gmake</tt> no están instalados en su sistema, los puede descargar desde <a href="http://www.sunfreeware.com/" target="_blank">http://www.sunfreeware.com</a>.</li>
                                     </ul>
 
-                                    <p><b>To download and install the GNU compilers and make utility</b></p>
+                                    <p><b>Para descargar e instalar los compiladores GNU compilers y la utilidad make</b></p>
                                     <ol>
-                                        <li>Download <tt>gcc</tt> and <tt>make</tt>.</li>
-                                        <li>If the download zip files are not automatically extracted during download, unzip them with <tt>gunzip</tt>.
+                                        <li>Descargar <tt>gcc</tt> y <tt>make</tt>.</li>
+                                        <li>Si los archivos zip no son extraídos automáticamente durante la descarga, los descomprime con <tt>gunzip</tt>.
                                         </li>
-                                        <li>Install the packages with the <tt>pkgadd</tt> command.</li>
-                                        <li>Make sure to include the GNU compiler directory and the GNU make directory in your path before starting the NetBeans IDE.
+                                        <li>Instalar los paquetes con el comando <tt>pkgadd</tt>.</li>
+                                        <li>Debe asegurarse de incluir la carpeta del compilador GNU y la carpeta de GNU make en la ruta de su sistema antes de iniciar el IDE de NetBeans.
                                         </li>
-                                        <li>See <a href="#verifying">Verifying the Installation</a> to verify that the tools were installed correctly for the NetBeans IDE.</li>
+                                        <li>Vea <a href="#verifying">Verificando la Instalación</a> para verificar que las herramientas se instalaron correctamente para el IDE NetBeans.</li>
                                     </ol>
 
 
-                                    <h4><tt>gdb</tt> Debugger</h4>
-                                    <p>Whether you use the Oracle Solaris Studio compilers and Solaris <tt>make</tt> or the GNU compilers and GNU <tt>make</tt>, you must have the <tt>gdb</tt> debugger to debug applications in NetBeans IDE. You can download
-                                        <tt>gdb</tt> from
-                                        <a href="http://www.sunfreeware.com/" target="_blank">http://www.sunfreeware.com</a>.
+                                    <h4>Debugger <tt>gdb</tt></h4>
+                                    <p>Sin importar si usa los compiladores de Oracle Solaris Studio y <tt>make</tt> de Solaris o los compiladores de GNU y <tt>make</tt>de GNU, necesita tener el debugger <tt>gdb</tt> para depurar aplicaciones en el IDE NetBeans.
+                                        Puede descargar <tt>gdb</tt> de <a href="http://www.sunfreeware.com/" target="_blank">http://www.sunfreeware.com</a>.
                                     </p>
-                                    <p><b>To download and install <tt>gdb</tt> for Oracle Solaris 10:</b></p>
+                                    <p><b>Para descargar e instalar <tt>gdb</tt> para Oracle Solaris 10:</b></p>
                                     <ol>
-                                        <li>Download <tt>gdb</tt> 6.8.</li>
-                                        <li>If the download zip file is not automatically extracted during download, unzip it with <tt>gunzip</tt>.
+                                        <li>Descargar <tt>gdb</tt> 6.8.</li>
+                                        <li>Si el archivo zip descargado no es automáticamente extraído durante la descarga, lo puede descomprimir con <tt>gunzip</tt>.
                                         </li>
-                                        <li>Install the package with the <tt>pkgadd</tt> command.</li>
-                                        <li>Make sure to include the path to <tt>gdb</tt> in your <tt>PATH</tt> before starting the NetBeans IDE.</li>
-                                        <li>See <a href="#verifying">Verifying the Installation</a> to verify that the tools were installed correctly for the NetBeans IDE.</li>
+                                        <li>Instalar el paquete usando el comando <tt>pkgadd</tt>.</li>
+                                        <li>Se debe asegurar de incluir la ruta de <tt>gdb</tt> en el <tt>PATH</tt> de su sistema antes de iniciar el IDE NetBeans.</li>
+                                        <li>Vea <a href="#verifying">Verificando la Instalación</a> para verificar que las herramientas se instalaron correctamente para el IDE NetBeans.</li>
                                     </ol>
-                                    <p>On Oracle Solaris 11, you can install gdb 6.8 from the pkg.oracle.com repository.</p>
+                                    <p>En Oracle Solaris 11, puede instalar gdb 6.8 desde el repositorio pkg.oracle.com.</p>
 
 
                                     <!-- COMPILER SETUP: LINUX OS +++++++++++++++++++++++++ -->
                                     <h3><a name="compilers_linux"></a>Linux</h3>
-                                    <p>On Linux platforms, you can use GNU tools or Oracle Solaris Studio tools.</p>
-                                    <p>NetBeans IDE has been tested with the following compilers and tools:</p>
+                                    <p>En la plataforma Linux, puede usar las herramientas GNU o herramientas de Oracle Solaris Studio.</p>
+                                    <p>El IDE NetBeans ha sido probado con los siguientes compiladores y herramientas:</p>
 
 
                                     <table>
                                         <tbody>
 
                                             <tr>
-                                                <th class="tblheader" scope="col">Software or Resource</th>
-                                                <th class="tblheader" scope="col">Version Tested</th>
-                                                <th class="tblheader" scope="col">Description</th>
+                                                <th class="tblheader" scope="col">Software o Recursos</th>
+                                                <th class="tblheader" scope="col">Versión Probada</th>
+                                                <th class="tblheader" scope="col">Descripción</th>
                                             </tr>
                                             <tr>
                                                 <td class="tbltd1"><tt>cc</tt></td>
                                                 <td class="tbltd1"> 5.10, 5.11, 5.12 </td>
-                                                <td class="tbltd1">Sun Studio 12 Update 1, Oracle Solaris Studio 12.2, and Oracle Solaris Studio 12.3 compilers</td>
+                                                <td class="tbltd1">Compiladores de Sun Studio 12 Update 1, Oracle Solaris Studio 12.2 y Oracle Solaris Studio 12.3</td>
 
                                             </tr>
                                             <tr>
                                                 <td class="tbltd1"><tt>CC</tt></td>
                                                 <td class="tbltd1"> 5.10, 5.11, 5.12 </td>
-                                                <td class="tbltd1">Sun Studio 12 Update 1, Oracle Solaris Studio 12.2, and Oracle Solaris Studio 12.3 compilers</td>
+                                                <td class="tbltd1">Compiladores de Sun Studio 12 Update 1, Oracle Solaris Studio 12.2 y Oracle Solaris Studio 12.3</td>
 
                                             </tr>
 
                                             <tr>
                                                 <td class="tbltd1"><tt>gcc</tt></td>
-                                                <td class="tbltd1">4.6.3 and 4.7.2</td>
-                                                <td class="tbltd1">GNU C compiler</td>
+                                                <td class="tbltd1">4.6.3 y 4.7.2</td>
+                                                <td class="tbltd1">Compilador GNU C</td>
 
                                             </tr>
                                             <tr>
                                                 <td class="tbltd1"><tt>g++</tt></td>
-                                                <td class="tbltd1">4.6.3 and 4.7.2</td>
-                                                <td class="tbltd1">GNU C++ compiler</td>
+                                                <td class="tbltd1">4.6.3 y 4.7.2</td>
+                                                <td class="tbltd1">Compilador GNU C++</td>
 
                                             </tr>
                                             <tr>
                                                 <td class="tbltd1"><tt>gdb</tt></td>
-                                                <td class="tbltd1">7.4 and 7.5 </td>
-                                                <td class="tbltd1">GNU debugger</td>
+                                                <td class="tbltd1">7.4 y 7.5 </td>
+                                                <td class="tbltd1">Debugger GNU</td>
 
                                             </tr>
                                             <tr>
@@ -602,7 +611,7 @@ directory</i>/solarisstudio12.3/bin</tt> is in your path before you start the Ne
                                             <tr>
                                                 <td class="tbltd1"><tt>dmake</tt></td>
                                                 <td class="tbltd1">7.9, 8.0, 8.1</td>
-                                                <td class="tbltd1">Sun Studio 12 Update 1, Oracle Solaris Studio 12.2, and Oracle Solaris Studio 12.3 distributed make utility</td>
+                                                <td class="tbltd1">Utilidad make distribuida en Sun Studio 12 Update 1, Oracle Solaris Studio 12.2 y Oracle Solaris Studio 12.3</td>
 
                                             </tr>
 
@@ -611,44 +620,45 @@ directory</i>/solarisstudio12.3/bin</tt> is in your path before you start the Ne
                                     <br>
                                     <br>
 
-                                    <h4>Oracle Solaris Studio 12.2 Compilers on Linux</h4>
-                                    <p>If you want to use the Oracle Solaris Studio 12.3 compilers in a Linux OS:</p>
+                                    <h4>Compiladores Oracle Solaris Studio 12.2 en Linux</h4>
+                                    <p>Si desea usar los compiladores de Oracle Solaris Studio 12.3 en el SO Linux:</p>
                                     <ul>
-                                        <li>If you have Oracle Solaris Studio 12.3 software installed, ensure that <tt>/<i>installation
-directory</i>/solarisstudio12.3/bin</tt> is in your path before you start the NetBeans IDE. The default location is <tt>/opt/oracle/solarisstudio12.3/bin</tt> when installing with Linux packages.</li>
+                                        <li>Si el software Oracle Solaris Studio 12.3 está instalado, se debe de asegurar que<tt>/<i>carpeta de instalación</i>/solarisstudio12.3/bin</tt> está en la ruta de su sistema antes de iniciar el IDE NetBeans. La localización
+                                            por defecto para los paquetes en Linux es <tt>/opt/oracle/solarisstudio12.3/bin</tt>.</li>
                                         <li>
-                                            If you do not have Oracle Solaris Studio 12.3 software installed, you can download it free at
-                                            <a href="http://www.oracle.com/technetwork/server-storage/solarisstudio/downloads/index-jsp-141149.html" target="_blank">
+                                            Si no ha instalado el software Oracle Solaris Studio 12.3, puede lo puede descargar gratuitamente desde
+                                            <a href="http://www.oracle.com/technetwork/server-storage/solarisstudio/downloads/index-jsp-141149.html"
+                                                target="_blank">
                                                 <tt>http://www.oracle.com/technetwork/server-storage/solarisstudio/downloads/index-jsp-141149.html</tt></a>.
                                         </li>
                                     </ul>
 
-                                    <p><b>To download and install the Oracle Solaris Studio 12.3 compilers:</b></p>
+                                    <p><b>Para descargar e instalar los compiladores de  Oracle Solaris Studio 12.3:</b></p>
                                     <ol>
 
-                                        <li>Create a directory for the downloaded file. You must have write permission for this directory.</li>
-                                        <li>If your browser is set to download to a particular location such as your Desktop or a Downloads directory without prompting, set the browser preferences to download to the directory you created. For Firefox, the
-                                            download directory is set in Edit &gt; Preferences &gt; Main.</li>
+                                        <li>Crear una carpeta para el archivo descargado. Debe de tener privilegios de escritura para esa carpeta.</li>
+                                        <li>Si su navegador web está configurado para descargar a una ubicación particular como su Escritorio o la carpeta Descargas, configure las preferencias de su navegador web para descargar a la carpeta que ha creado.
+                                            Para Firefox, la carpeta de descarga está en Editar &gt; Preferencias &gt; Principal.</li>
 
-                                        <li>Download the file for your platform into the download directory you created. If you are using Ubuntu, download the tarfile installation into the directory where you want to install it because the packages are for
-                                            Oracle Linux, Red Hat Enterprise Linux, and SuSE Linux Enterprise System. Note also that Ubuntu is not an officially supported platform for Oracle Solaris Studio IDE, but the compilers have been tested for use
-                                            in NetBeans IDE and been found to work.
+                                        <li>Descargar el archivo para su plataforma en la carpeta creada. Si está usando Ubuntu, debe descargar el archivo empaquetado en la carpeta donde lo quiera instalar por que los paquetes son para Oracle Linux, Red Hat
+                                            Enterprise Linux y SuSE Linux Enterprise System. Considerar también que Ubuntu no es una plataforma oficialmente soportada por el IDE de Oracle Solaris Studio pero los compiladores han sido probados para su
+                                            uso en el IDE NetBeans.
                                         </li>
-                                        <li>Go to the download directory, and uncompress and untar the downloaded file.
+                                        <li>Vaya a la carpeta de descarga, descomprima y desempaquete el archivo descargado.
                                             <pre>bzcat <i>filename</i> | tar xvf -
 </pre>
                                         </li>
                                         <li>
-                                            If you downloaded the RPM packages, follow the instructions in Chapter 2 of the <a href="http://download.oracle.com/docs/cd/E18659_01/html/821-1385/index.html" target="_blank"><i>Oracle Solaris Studio 12.3 Installation Guide</i></a>                                            to install the C compiler, C++ compiler, and Fortran compiler.</li>
+                                            Si ha descargado los paquetes RPM, siga las instrucciones en el Capítulo 2 de <a href="http://download.oracle.com/docs/cd/E18659_01/html/821-1385/index.html" target="_blank"><i>Oracle Solaris Studio 12.3 Installation Guide</i></a>                                            para instalar el compilador C, el compilador C++ y el compilador Fortran.</li>
 
 
-                                        <li>Edit your <tt>PATH</tt> to add the path to the Oracle Solaris Studio software before starting the NetBeans IDE.</li>
-                                        <li>See <a href="#verifying">Verifying the Installation</a> to verify that the tools were installed correctly for the NetBeans IDE.</li>
+                                        <li>Edite el <tt>PATH</tt> para añadir la ruta al software de Oracle Solaris Studio antes de iniciar el IDE NetBeans.</li>
+                                        <li>Vea <a href="#verifying">Verificando la Instalación</a> para verificar que las herramientas se han instalado correctamente para el IDE NetBeans.</li>
                                     </ol>
-                                    <p><b>To download and install the GNU debugger in Oracle Linux or Red Hat Enterprise Linux, type:</b></p>
+                                    <p><b>Para desargar e instalar el depurador GNU en Oracle Linux o Red Hat Enterprise Linux, escriba:</b></p>
                                     <pre>yum install gdb</pre>
 
-                                    <p><b>To download and install the GNU debugger in Ubuntu, type:</b></p>
+                                    <p><b>Para descargar e instalar el depurador GNU en Ubuntu, escriba:</b></p>
                                     <pre>sudo apt-get install gdb</pre>
 
 
